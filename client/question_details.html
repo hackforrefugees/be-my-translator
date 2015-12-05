@@ -1,0 +1,30 @@
+<template name="question_view">
+    {{#each questions}}
+        {{> question_details}}
+    {{/each}}
+</template>
+
+<template name="question_answer">
+    <h2>{{user}}:</h2>
+    <strong>Type:</strong> {{type}}<br>
+    <br>
+    {{data}}<br>
+</template>
+
+<template name="question_details">
+    <h1>{{user}}:</h1>
+    <br>
+    <strong>Language:</strong> from <strong>{{lang_from}}</strong> to <strong>{{lang_to}}</strong><br>
+    <strong>Title:</strong> {{title}}<br>
+    <strong>Type:</strong> {{type}}<br>
+    <br>
+    {{data}}<br>
+    <br>
+    {{#each answers}}
+        {{> question_answer }}
+        <br>
+    {{/each}}
+
+    <br>
+    [ insert 'New Answer bar' here ]
+</template>
