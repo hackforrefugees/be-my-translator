@@ -9,7 +9,7 @@ if (Meteor.isClient) {
                 lang_to: event.target.lang_to.value,
                 title: event.target.title.value,
                 timestamp: new Date(),
-                data: event.target.question.value,
+                data: event.target.text.value,
             });
             // TODO: loop...
             event.target.lang_from.value = "";
