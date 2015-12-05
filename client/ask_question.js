@@ -16,7 +16,7 @@ if (Meteor.isClient) {
             event.target.lang_from.value = "";
             event.target.lang_to.value = "";
             event.target.title.value = "";
-            event.target.question.value = "";
+            event.target.text.value = "";
         }
     });
 }
