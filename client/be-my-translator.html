@@ -1,0 +1,56 @@
+<!-- Main Page -->
+<head>
+  <title>be-my-translator</title>
+</head>
+
+<body>
+<img src="images/12_134042_profile._V01_.gif">.
+  <h1>Welcome to Be My Translator!</h1>
+{{> home_page}}
+  {{> ask_question}}
+  {{> answer_question}}
+<div id="content">
+   <div id="tab-container">
+      <ul>
+         <li class="selected"><a href="">Ask</a></li>
+         <li><a href="">Answer</a></li>
+      </ul>
+   </div>
+   <div id="main-container">
+      <h1> </h1>
+   </div>
+</div>
+
+</body>
+
+<!-- Default Template -->
+<!--
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+-->
+
+<template name="foo">
+	<button>FOO</button>
+	<p>You've pressed the button {{counter}} times.</p>
+</template>
+
+
+<template name="home_page">
+	<button>Click Me</button>
+	<p>You've pressed the button {{counter}} times.</p>
+</template>
+
+
+<template name="ask_question">
+<button>Click Me</button>
+<p>You've pressed the button {{counter}} times.</p>
+</template>
+
+
+
+<template name="answer_question">
+<button>Click Me</button>
+<p>You've pressed the button {{counter}} times.</p>
+</template>
