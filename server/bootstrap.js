@@ -1,7 +1,7 @@
 Meteor.startup(function() {
 
   // if there are no polls available
-  if (Polls.find().count() === 0) {
+  if (Questions.find().count() === 0) {
 
     // create sample polls
     var samplePolls = [
@@ -25,7 +25,7 @@ Meteor.startup(function() {
 
     // loop over each sample poll and insert into database
     _.each(samplePolls, function(poll) {
-      Polls.insert(poll);
+      Questions.insert(poll);
     });
   }
 

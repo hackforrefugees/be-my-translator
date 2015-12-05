@@ -10,18 +10,23 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.ask_question.events({
-        "submit form": function (event, template) {
-        var inputValue = event.target.textInput.value;
-      // increment the counter when button is clicked
-       alert(inputValue);
-       Session.set('textInput', Session.get('inputValue'));
+    Template.be-my-translator.events({
+    'submit': function(event){
+        event.preventDefault();
+        var value =  event.target.text.value;
 
-       //QuestionCollection.insert(text: textInput, )
-     }
-  });
+        alert(value);
+
+        Questions.insert({
+            id: 0,
+            $addToSet: {comment: value},
+            timestamp: new Date()
+        });
+        event.target.text.value = "";
+    }
+
+    });
 }
-
 if (Meteor.isServer) {
   Meteor.startup(function () {
     // code to run on server at startup
