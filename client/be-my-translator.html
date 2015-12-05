@@ -1,14 +1,18 @@
 <!-- Main Page -->
 <head>
-  <title>be-my-translator</title>
+  <title>Be my Translator</title>
 </head>
 
 <body>
 <img src="images/12_134042_profile._V01_.gif">.
   <h1>Welcome to Be My Translator!</h1>
-{{> home_page}}
+<!--
+  {{> home_page}}
   {{> ask_question}}
   {{> answer_question}}
+  {{> questionForm}}
+-->
+
 <div id="content">
    <div id="tab-container">
       <ul>
@@ -17,25 +21,17 @@
       </ul>
    </div>
    <div id="main-container">
-      <h1> </h1>
+    <div class="container">
+	    <div class="row">
+			<div class="col-md-6 col-md-offset-3">
+					{{ >questionForm }}
+		    </div>
+	    </div>
+	</div>
    </div>
 </div>
 
 </body>
-
-<!-- Default Template -->
-<!--
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
--->
-
-<template name="foo">
-	<button>FOO</button>
-	<p>You've pressed the button {{counter}} times.</p>
-</template>
-
 
 <template name="home_page">
 	<button>Click Me</button>
@@ -43,6 +39,7 @@
 </template>
 
 
+<!-- Main Page
 <template name="ask_question">
     <form>
         <input type="text" name="textInput" />
@@ -56,4 +53,39 @@
 <template name="answer_question">
 <button>Click Me</button>
 <p>You've pressed the button {{counter}} times.</p>
+</template>
+-->
+
+<template name="questionForm">
+
+<form class="ask_question">
+    <div class="form-group question-group">
+        <label>Question</label>
+        <input type="text" name="question" class="form-control" placeholder="Your Question">
+    </div>
+
+    <div class="form-group">
+        <label>Title</label>
+        <input type="text" name="choice1" class="form-control" placeholder="Title">
+    </div>
+
+	<div class="form-group">
+        <label>From</label>
+        <input type="text" name="choice2" class="form-control" placeholder="From">
+    </div>
+
+	<div class="form-group">
+        <label>To</label>
+        <input type="text" name="choice3" class="form-control" placeholder="To">
+    </div>
+
+	<br>
+    <button type="submit" class="btn">Record Button</button>
+
+	<button type="submit" class="btn">Image Button</button>
+
+	<button type="submit" class="btn">Text Button</button>
+
+</form>
+
 </template>

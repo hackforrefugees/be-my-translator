@@ -186,3 +186,16 @@ header .hide-completed {
    border: 1px solid #888;
 }
 
+
+
+.question_form 			{
+	margin-bottom:30px;
+}
+.question-group 	{
+	margin-bottom:20px;
+	background:#EEE;
+	padding:20px;
+}
+.question-group label 	{
+	font-size:18px;
+}
