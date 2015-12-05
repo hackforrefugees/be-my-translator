@@ -199,3 +199,8 @@ header .hide-completed {
 .question-group label 	{
 	font-size:18px;
 }
+
+.question-item:hover {
+    border: 1px solid #000;
+    cursor: pointer;
+}

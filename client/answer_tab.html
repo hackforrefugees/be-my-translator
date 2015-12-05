@@ -1,0 +1,22 @@
+<template name="question_detail_button">
+    <div class="row question-item">
+        <div>
+            {{type}}
+        </div>
+        <div>
+            <strong>{{lang_from}}</strong> to <strong>{{lang_to}}</strong>
+        </div>
+        <div>
+            {{timestamp}}
+        </div>
+    </div>
+</template>
+
+<template name="answer_tab">
+    <h1>Answer tab...</h1>
+    <br>
+    {{#each questions}}
+        {{> question_detail_button}}
+        <br><br>
+    {{/each}}
+</template>

@@ -5,10 +5,11 @@ if (Meteor.isClient) {
 
             Questions.insert({
                 user: "Dummy User 1",
-                lang_form: event.target.lang_from.value,
+                lang_from: event.target.lang_from.value,
                 lang_to: event.target.lang_to.value,
                 title: event.target.title.value,
                 timestamp: new Date(),
+                type: "text",
                 data: event.target.text.value,
             });
             // TODO: loop...
