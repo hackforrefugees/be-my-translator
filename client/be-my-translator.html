@@ -42,33 +42,52 @@
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
 <form class="ask_question">
-    <div class="form-group question-group">
-        <label>Question</label>
-        <input type="text" name="title" class="form-control" placeholder="Title">
+    <div class="ui list">
+
+    <div class="item ui input">
+        <label>Title</label>
+        <input type="text" name="choice1" class="form-control">
     </div>
 
-    <div class="form-group">
+	<div class="item ui input">
         <label>From</label>
-        <input type="text" name="lang_from" class="form-control" placeholder="From">
+        <input type="text" name="choice2" class="form-control">
     </div>
 
-    <div class="form-group">
+
+	<div class="item ui input">
         <label>To</label>
-        <input type="text" name="lang_to" class="form-control" placeholder="To">
+        <input type="text" name="lang_to" class="form-control">
     </div>
 
 	<br>
-    <button class="btn">Record Button</button>
+
+        <button class="ui icon button">
+            <i class="unmute icon"></i>
+        </button>
+        <br>
 <!--
+        <input type="text" name="choice3" class="form-control">
+    </div>
+
+
+    <button type="submit" class="btn">Record Button</button>
+
 	<button type="submit" class="btn">Image Button</button>
  -->
-  <a href="#" class="takePhoto">take photo</a>
+        <a href="#" class="takePhoto">
+        <button class="ui icon button">
+
+            <i class="camera icon"> </i></button></a>
+
 
   <img class="photo">
 
-    <input type="text" name="text" placeholder="Type to add a question" />
-    <input type="submit" name="Send"/>
-
+    <div class="item ui input">
+        <input type="text" name="text" placeholder="Type to add question" />
+        <input type="submit" name="Send"/>
+    </div>
+    </div>
 </form>
 
     </div>

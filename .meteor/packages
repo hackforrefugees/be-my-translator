@@ -9,3 +9,6 @@ insecure
 mdg:camera
 msavin:mongol
 iron:router
+semantic:ui
+flemay:less-autoprefixer
+jquery
