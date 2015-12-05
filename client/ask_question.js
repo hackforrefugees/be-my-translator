@@ -1,36 +1,24 @@
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
+    Template.questionForm.events({
+        'submit .ask_question': function(event){
+            event.preventDefault();
 
-  Template.ask_question.helpers({
-    counter: function () {
-      return Session.get('counter');
-    }
-  });
-
-  Template.ask_question.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
-    }
-  });
-}
-
-    Template.ask_question.events({
-    'submit': function(event){
-        event.preventDefault();
-        var value =  event.target.text.value;
-
-        alert(value);
-
-        Questions.insert({
-            id: 0,
-            $addToSet: {comment: value},
-            timestamp: new Date()
-        });
-        event.target.text.value = "";
-    }
+            Questions.insert({
+                user: "Dummy User 1",
+                lang_form: event.target.lang_from.value,
+                lang_to: event.target.lang_to.value,
+                title: event.target.title.value,
+                timestamp: new Date(),
+                data: event.target.question.value,
+            });
+            // TODO: loop...
+            event.target.lang_from.value = "";
+            event.target.lang_to.value = "";
+            event.target.title.value = "";
+            event.target.question.value = "";
+        }
     });
+}
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
