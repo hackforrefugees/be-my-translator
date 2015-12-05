@@ -1,11 +1,9 @@
-if (Meteor.isClient) {
-  Template.home_page.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      //QuestionCollection.
-    }
-  });
+Router.route('/', {
+    layoutTemplate: 'main',
+    template: 'questionForm',
+});
 
+if (Meteor.isClient) {
   Template.questionForm.events({
     // take a pic
     "click .takePhoto": function(event, template) {

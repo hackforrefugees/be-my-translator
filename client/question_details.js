@@ -1,4 +1,11 @@
+Router.route('/details', {
+    layoutTemplate: 'main',
+    template: 'question_view',
+});
+
 if (Meteor.isClient) {
+    Meteor.subscribe('questions');
+
     Template.question_view.helpers({
         questions: function () {
             return Questions.find({});

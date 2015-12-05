@@ -3,37 +3,21 @@
   <title>Be my Translator</title>
 </head>
 
-<body>
-  <h1>Welcome to Be My Translator!</h1>
-<!--
-  {{> home_page}}
-  {{> ask_question}}
-  {{> answer_question}}
-  {{> questionForm}}
--->
-
-<div id="content">
-   <div id="tab-container">
-      <ul>
-         <li class="selected"><a href="">Ask</a></li>
-         <li><a href="">Answer</a></li>
-      </ul>
-   </div>
-   <div id="main-container">
-    <div class="container">
-	    <div class="row">
-			<div class="col-md-6 col-md-offset-3">
-					{{ >questionForm }}
-		    </div>
-	    </div>
-	</div>
-   </div>
-</div>
-</body>
-
-<template name="home_page">
-	<button>Click Me</button>
-	<p>You've pressed the button {{counter}} times.</p>
+<template name="main">
+    <h1>Welcome to Be My Translator!</h1>
+    <div id="content">
+       <div id="tab-container">
+          <ul>
+             <li class="selected"><a href="/">Ask</a></li>
+             <li><a href="/details">Answer</a></li>
+          </ul>
+       </div>
+       <div id="main-container">
+        <div class="container">
+            {{> yield}}
+        </div>
+       </div>
+    </div>
 </template>
 
 
@@ -55,7 +39,8 @@
 -->
 
 <template name="questionForm">
-
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
 <form class="ask_question">
     <div class="form-group question-group">
         <label>Question</label>
@@ -67,7 +52,7 @@
         <input type="text" name="lang_from" class="form-control" placeholder="From">
     </div>
 
-	<div class="form-group">
+    <div class="form-group">
         <label>To</label>
         <input type="text" name="lang_to" class="form-control" placeholder="To">
     </div>
@@ -85,5 +70,8 @@
     <input type="submit" name="Send"/>
 
 </form>
+
+    </div>
+</div>
 
 </template>

@@ -1,9 +1,3 @@
-<template name="question_view">
-    {{#each questions}}
-        {{> question_details}}
-    {{/each}}
-</template>
-
 <template name="question_answer">
     <h3>User: {{user}}</h3>
     <strong>Type:</strong> {{type}}<br>
@@ -42,4 +36,11 @@
 
     <br>
     [ insert 'New Answer bar' here ]
+</template>
+
+<template name="question_view">
+    {{#each questions}}
+        {{> question_details}}
+        <br><br>
+    {{/each}}
 </template>
