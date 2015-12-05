@@ -1,2 +1,8 @@
 # Ignore all editor swap files
 *.swp
+.meteor/*
+.meteor/.finished-upgraders
+.meteor/packages
+.meteor/release
+.meteor/versions
+.meteor/local
