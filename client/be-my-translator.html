@@ -44,8 +44,11 @@
 
 
 <template name="ask_question">
-<button>Click Me</button>
-<p>You've pressed the button {{counter}} times.</p>
+    <form>
+        <input type="text" name="textInput" />
+        <input type="submit" value="Submit Form" />
+    </form>
+<p> You wrote {{textInput}}</p>
 </template>
 
 

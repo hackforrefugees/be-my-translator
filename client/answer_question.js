@@ -1,6 +1,8 @@
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault('counter', 0);
+  Session.setDefault('textInput', "");
+
 
   Template.answer_question.helpers({
     counter: function () {
@@ -8,11 +10,15 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.answer_question.events({
-    'click button': function () {
+  Template.ask_question.events({
+        "submit form": function (event, template) {
+        var inputValue = event.target.textInput.value;
       // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
-    }
+       alert(inputValue);
+       Session.set('textInput', Session.get('inputValue'));
+
+       //QuestionCollection.insert(text: textInput, )
+     }
   });
 }
 
