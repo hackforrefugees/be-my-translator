@@ -3,14 +3,17 @@
   <title>Be my Translator</title>
 </head>
 
+
 <template name="main">
-    <h1>Welcome to Be My Translator!</h1>
+    <h1>Be my Translator</h1>
     <div id="content">
        <div id="tab-container">
-          <ul>
-             <li class="selected"><a href="/">Ask</a></li>
-             <li><a href="/answer">Answer</a></li>
+           <div class="ui tabular menu">
+           <ul>
+             <a class="item active">Ask</a>
+             <a class="item">Answer</a>
           </ul>
+           </div>
        </div>
        <div id="main-container">
         <div class="container">
@@ -19,24 +22,6 @@
        </div>
     </div>
 </template>
-
-
-<!-- Main Page
-<template name="ask_question">
-    <form>
-        <input type="text" name="textInput" />
-        <input type="submit" value="Submit Form" />
-    </form>
-<p> You wrote {{textInput}}</p>
-</template>
-
-
-
-<template name="answer_question">
-<button>Click Me</button>
-<p>You've pressed the button {{counter}} times.</p>
-</template>
--->
 
 <template name="questionForm">
 <div class="row">
@@ -59,35 +44,30 @@
         <label>To</label>
         <input type="text" name="lang_to" class="form-control">
     </div>
-
-	<br>
-
-        <button class="ui icon button">
-            <i class="unmute icon"></i>
-        </button>
-        <br>
-<!--
-        <input type="text" name="choice3" class="form-control">
     </div>
-
-
-    <button type="submit" class="btn">Record Button</button>
-
-	<button type="submit" class="btn">Image Button</button>
- -->
-        <a href="#" class="takePhoto">
-        <button class="ui icon button">
-
-            <i class="camera icon"> </i></button></a>
-
-
-  <img class="photo">
-
+	<br>
+        <div class="ui  horizontal list">
     <div class="item ui input">
         <input type="text" name="text" placeholder="Type to add question" />
         <input type="submit" name="Send"/>
     </div>
+
+
+    <div class="ui  horizontal list">
+        <button class="ui icon button">
+            <i class="unmute icon"></i>
+        </button>
+
+
+        <img class="photo">
+        <a href="#" class="takePhoto">
+            <button class="ui icon button">
+                <i class="camera icon">
+                </i>
+            </button>
+        </a>
     </div>
+        </div>
 </form>
 
     </div>
