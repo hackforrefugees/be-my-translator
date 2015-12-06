@@ -2,9 +2,7 @@ Router.route('/details/:_id', {
     layoutTemplate: 'main',
     template: 'question_details',
     data: function() {
-        var q = Questions.findOne({ _id: this.params._id});
-        console.log(q);
-        return q;
+        return Questions.findOne({ _id: this.params._id});
     }
 });
 
@@ -30,6 +28,13 @@ if (Meteor.isClient) {
             // Make sure question_answer now this is an approved answer
             item.approved = true;
             return item;
+        }
+    });
+
+    Template.question_details.events({
+        "click .post-new-answer": function (event, template) {
+            event.preventDefault();
+            Router.go('/new_answer/' + this._id);
         }
     });
 }

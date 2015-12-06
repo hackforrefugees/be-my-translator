@@ -1,6 +1,7 @@
 <template name="question_answer">
     <h3>User: {{user}}</h3>
     <strong>Type:</strong> {{type}}<br>
+    <strong>Date:</strong> {{timestamp}}<br>
     <br>
     {{data}}<br>
     <br>
@@ -15,7 +16,7 @@
     <br><br>
 </template>
 
-<template name="question_details">
+<template name="question_description">
     <h1>User: {{user}}</h1>
     <br>
     <strong>Language:</strong> from <strong>{{lang_from}}</strong> to <strong>{{lang_to}}</strong><br>
@@ -24,6 +25,10 @@
     <strong>Date:</strong> {{timestamp}}<br>
     <br>
     {{data}}<br>
+</template>
+
+<template name="question_details">
+    {{> question_description this }}
     <br>
     {{#if approved}}
         {{> question_approved item=approved }}
@@ -35,5 +40,5 @@
     {{/each}}
 
     <br>
-    [ insert 'New Answer bar' here ]
+    <button class="post-new-answer">Post a new answer!</button>
 </template>

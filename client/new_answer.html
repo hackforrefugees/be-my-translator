@@ -1,0 +1,12 @@
+<template name="new_answer">
+    {{> question_description this }}
+    <br>
+    <h2>Post a new answer:</h2>
+    <form class="new_answer">
+        <div class="item ui input">
+            <label>Answer text:</label>
+            <input type="text" name="text" class="form-control" />
+            <input type="submit" name="Send" />
+        </div>
+    </form>
+</template>
