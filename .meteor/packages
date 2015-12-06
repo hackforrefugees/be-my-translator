@@ -13,3 +13,6 @@ semantic:ui
 flemay:less-autoprefixer
 jquery
 dispatch:viewport
+accounts-ui
+accounts-password
+accounts-facebook
