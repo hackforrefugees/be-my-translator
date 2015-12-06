@@ -1,3 +1,8 @@
+Router.route('/record', {
+    layoutTemplate: 'main',
+    template: 'record',
+});
+
 Template.record.onCreated(function() {
   $.getScript("https://webrtcexperiment-webrtc.netdna-ssl.com/RecordRTC.js");
 });

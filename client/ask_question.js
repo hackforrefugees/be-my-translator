@@ -17,7 +17,11 @@ if (Meteor.isClient) {
             event.target.lang_to.value = "";
             event.target.title.value = "";
             event.target.text.value = "";
-        }
+        },
+        'click .go-to-record': function(event) {
+            event.preventDefault();
+            Router.go('/record');
+        },
     });
 }
 
