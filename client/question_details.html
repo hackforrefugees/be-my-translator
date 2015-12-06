@@ -1,0 +1,49 @@
+<template name="question_answer">
+    <h3>User: {{user}}</h3>
+    <strong>Type:</strong> {{type}}<br>
+    <strong>Date:</strong> {{timestamp}}<br>
+    <br>
+    {{data}}
+    <br>
+    {{#unless approved}}
+        <button class="answered">Mark as answered</button>
+    {{/unless}}
+</template>
+
+<template name="question_approved">
+    <h2>Approved answer:</h2>
+    {{> question_answer answer }}
+    <br><br>
+</template>
+
+<template name="question_description">
+    <h1>User: {{user}}</h1>
+    <br>
+    <strong>Language:</strong> from <strong>{{lang_from}}</strong> to <strong>{{lang_to}}</strong><br>
+    <strong>Title:</strong> {{title}}<br>
+    <strong>Type:</strong> {{type}}<br>
+    <strong>Date:</strong> {{timestamp}}<br>
+    <br>
+    {{#if is_photo type}}
+        <img src="{{data}}" class="photo">
+    {{else}}
+        {{data}}
+    {{/if}}
+    <br>
+</template>
+
+<template name="question_details">
+    {{> question_description this }}
+    <br>
+    {{#if approved}}
+        {{> question_approved item=approved }}
+    {{/if}}
+    <h2>All answers:</h2>
+    {{#each answers}}
+        {{> question_answer }}
+        <br>
+    {{/each}}
+
+    <br>
+    <button class="post-new-answer">Post a new answer!</button>
+</template>

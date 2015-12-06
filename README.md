@@ -1,5 +1,9 @@
 # be-my-translator
-Description: Like "Be My Eyes" but for translators
+How can we help refugees with new languages in a good way?			
+
+Be-my-translator is an app/web application where people who want to help can add their own profile and their language skills. Then refugees can enter the app and either choose to use the camera and get connected to someone that can help them through the app, or book a meeting with the person in order to get help with longer texts.
+
+-------
 
 # Instructions
 * Remember to only use libraries, content etc that is compatible with an open source license.

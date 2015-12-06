@@ -1,0 +1,83 @@
+<!-- Main Page -->
+<head>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <title>Be my Translator</title>
+</head>
+
+
+<template name="main">
+    <h1>Be my Translator</h1>
+    <div id="content">
+       <div id="tab-container" class="ui tabular menu">
+               <div class="column">
+                 <a class="item active" href="/">Ask</a>
+               </div>
+               <div class="column">
+               <a class="item" href="/answer">Answer</a>
+               </div>
+       </div>
+       <div id="main-container">
+        <div class="container">
+            {{> yield}}
+        </div>
+       </div>
+    </div>
+</template>
+
+<template name="questionForm">
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+<form class="ask_question">
+    {{> loginButtons}}
+    <div class="ui list">
+
+    <div class="item ui input"> <label>Title</label>
+        <input type="text" name="title" class="form-control">
+    </div>
+
+	<div class="item ui input"> <label>From</label>
+	<select name="lang_from" class="ui dropdown">
+	        <option value disabled selected>--Select--</option>
+	        {{#each language}}
+	            <option> {{this}}</option>
+	        {{/each}}
+    </select>
+    </div>
+	<div class="item ui input"> <label>To</label>
+	<select name="lang_to" class="ui dropdown">
+        <option value disabled selected>--Select--</option>
+        {{#each language}}
+            <option> {{this}}</option>
+        {{/each}}
+    </select>
+	</div>
+   </div>
+
+    <div class="ui  horizontal list">
+    <div class="item ui input">
+        <img class="photo"><br>
+        <input type="text" name="text" placeholder="Type to add question" />
+        <input type="submit" name="Send"/>
+    </div>
+
+
+    <div class="ui  horizontal list">
+        <button class="ui icon button go-to-record">
+            <i class="unmute icon"></i>
+        </button>
+
+
+        <a href="#" class="takePhoto">
+            <button class="ui icon button">
+                <i class="camera icon">
+                </i>
+            </button>
+        </a>
+    </div>
+        </div>
+</form>
+
+    </div>
+</div>
+
+</template>
