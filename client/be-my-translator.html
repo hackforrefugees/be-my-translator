@@ -34,19 +34,28 @@
         <input type="text" name="title" class="form-control">
     </div>
 
-	<div class="item ui input">
-        <label>From</label>
-        <input type="text" name="lang_from" class="form-control">
+	<div class="item ui input"> <label>From</label>
+	<select>
+	        <option value disabled selected>--Select--</option>
+	        {{#each months}}
+	            <option> {{this}}</option>
+	        {{/each}}
+    </select>
     </div>
 
 
-	<div class="item ui input">
-        <label>To</label>
-        <input type="text" name="lang_to" class="form-control">
+	<div class="item ui input"> <label>To</label>
+	<select>
+        <option value disabled selected>--Select--</option>
+        {{#each months}}
+            <option> {{this}}</option>
+        {{/each}}
+    </select>
+
     </div>
     </div>
 	<br>
-        <div class="ui  horizontal list">
+    <div class="ui  horizontal list">
     <div class="item ui input">
         <input type="text" name="text" placeholder="Type to add question" />
         <input type="submit" name="Send"/>
@@ -55,7 +64,7 @@
 
     <div class="ui  horizontal list">
         <button class="ui icon button">
-            <i class="unmute icon"></i>
+        <i class="unmute icon"></i>
         </button>
 
 
