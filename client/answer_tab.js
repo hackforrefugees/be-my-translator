@@ -7,8 +7,11 @@ if (Meteor.isClient) {
     Meteor.subscribe('questions');
 
     Template.answer_tab.helpers({
-        questions: function () {
-            return Questions.find({}, {sort: {timestamp: -1}});
+        ongoing: function () {
+            return Questions.find({approved: {$exists: false}}, {sort: {timestamp: -1}});
+        },
+        answered: function () {
+            return Questions.find({approved: {$exists: true}}, {sort: {timestamp: -1}});
         },
     });
 

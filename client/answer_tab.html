@@ -15,8 +15,20 @@
 <template name="answer_tab">
     <h1>Answer tab...</h1>
     <br>
-    {{#each questions}}
-        {{> question_detail_button}}
-        <br><br>
-    {{/each}}
+    {{#if ongoing}}
+        <h2>Ongoing questions:</h2>
+        <br>
+        {{#each ongoing}}
+            {{> question_detail_button}}
+            <br><br>
+        {{/each}}
+    {{/if}}
+    {{#if answered}}
+        <h2>Answered questions:</h2>
+        <br>
+        {{#each answered}}
+            {{> question_detail_button}}
+            <br><br>
+        {{/each}}
+    {{/if}}
 </template>
