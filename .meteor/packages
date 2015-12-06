@@ -16,3 +16,5 @@ dispatch:viewport
 accounts-ui
 accounts-password
 accounts-facebook
+cfs:standard-packages
+cfs:gridfs
