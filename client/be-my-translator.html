@@ -7,13 +7,13 @@
 <template name="main">
     <h1>Be my Translator</h1>
     <div id="content">
-       <div id="tab-container">
-           <div class="ui tabular menu">
-           <ul>
-             <a class="item active" href="/">Ask</a>
-             <a class="item" href="/answer">Answer</a>
-          </ul>
-           </div>
+       <div id="tab-container" class="ui tabular menu">
+               <div class="column">
+                 <a class="item active" href="/">Ask</a>
+               </div>
+               <div class="column">
+               <a class="item" href="/answer">Answer</a>
+               </div>
        </div>
        <div id="main-container">
         <div class="container">
@@ -35,7 +35,7 @@
     </div>
 
 	<div class="item ui input"> <label>From</label>
-	<select name="lang_from">
+	<select name="lang_from" class="ui dropdown">
 	        <option value disabled selected>--Select--</option>
 	        {{#each months}}
 	            <option> {{this}}</option>
@@ -45,7 +45,7 @@
 
 
 	<div class="item ui input"> <label>To</label>
-	<select name="lang_to">
+	<select name="lang_to" class="ui dropdown">
         <option value disabled selected>--Select--</option>
         {{#each months}}
             <option> {{this}}</option>
