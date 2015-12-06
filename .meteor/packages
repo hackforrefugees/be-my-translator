@@ -12,3 +12,6 @@ iron:router
 semantic:ui
 flemay:less-autoprefixer
 jquery
+accounts-ui
+accounts-password
+accounts-facebook
