@@ -1,34 +1,39 @@
 <template name="question_detail_button">
-    <div class="row question-item">
-        <div>
+    <div class="item question-item">
+        <div class="image">
             {{type}}
         </div>
-        <div>
+        <div class="content">
             <strong>{{lang_from}}</strong> to <strong>{{lang_to}}</strong>
-        </div>
-        <div>
+            <br>
             {{timestamp}}
         </div>
     </div>
 </template>
 
 <template name="answer_tab">
-    <h1>Answer tab...</h1>
-    <br>
-    {{#if ongoing}}
-        <h2>Ongoing questions:</h2>
+    <div>
+        <h1>Answer tab...</h1>
         <br>
-        {{#each ongoing}}
-            {{> question_detail_button}}
-            <br><br>
-        {{/each}}
-    {{/if}}
-    {{#if answered}}
-        <h2>Answered questions:</h2>
-        <br>
-        {{#each answered}}
-            {{> question_detail_button}}
-            <br><br>
-        {{/each}}
-    {{/if}}
+        {{#if ongoing}}
+            <h2>Ongoing questions:</h2>
+            <br>
+            <div class="ui link items">
+                {{#each ongoing}}
+                    {{> question_detail_button}}
+                <br><br>
+                {{/each}}
+            </div>
+        {{/if}}
+        {{#if answered}}
+            <h2>Answered questions:</h2>
+            <br>
+            <div class="ui items">
+                {{#each answered}}
+                    {{> question_detail_button}}
+                <br><br>
+                {{/each}}
+            </div>
+        {{/if}}
+    </div>
 </template>

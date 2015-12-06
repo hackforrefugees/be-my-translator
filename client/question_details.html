@@ -6,7 +6,7 @@
     {{data}}
     <br>
     {{#unless approved}}
-        <button class="answered">Mark as answered</button>
+        <button class="item ui basic button answered">Mark as answered</button>
     {{/unless}}
 </template>
 
@@ -33,17 +33,19 @@
 </template>
 
 <template name="question_details">
-    {{> question_description this }}
-    <br>
-    {{#if approved}}
-        {{> question_approved item=approved }}
-    {{/if}}
-    <h2>All answers:</h2>
-    {{#each answers}}
-        {{> question_answer }}
+    <div class="column">
+        {{> question_description this }}
         <br>
-    {{/each}}
+        {{#if approved}}
+            {{> question_approved item=approved }}
+        {{/if}}
+        <h2>All answers:</h2>
+        {{#each answers}}
+            {{> question_answer }}
+            <br>
+        {{/each}}
 
-    <br>
-    <button class="post-new-answer">Post a new answer!</button>
+        <br>
+        <button class="item ui basic button post-new-answer">Post a new answer!</button>
+    </div>
 </template>
