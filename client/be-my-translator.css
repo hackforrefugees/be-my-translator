@@ -204,3 +204,8 @@ header .hide-completed {
     border: 1px solid #000;
     cursor: pointer;
 }
+
+.photo {
+    max-width: 400px;
+    max-height: 300px;
+}

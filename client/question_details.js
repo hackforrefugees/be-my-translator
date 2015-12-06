@@ -31,6 +31,13 @@ if (Meteor.isClient) {
         }
     });
 
+    Template.question_description.helpers({
+        is_photo: function(type) {
+            return type == "photo";
+        },
+    });
+
+
     Template.question_details.events({
         "click .post-new-answer": function (event, template) {
             event.preventDefault();

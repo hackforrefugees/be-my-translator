@@ -3,7 +3,7 @@
     <strong>Type:</strong> {{type}}<br>
     <strong>Date:</strong> {{timestamp}}<br>
     <br>
-    {{data}}<br>
+    {{data}}
     <br>
     {{#unless approved}}
         <button class="answered">Mark as answered</button>
@@ -24,7 +24,12 @@
     <strong>Type:</strong> {{type}}<br>
     <strong>Date:</strong> {{timestamp}}<br>
     <br>
-    {{data}}<br>
+    {{#if is_photo type}}
+        <img src="{{data}}" class="photo">
+    {{else}}
+        {{data}}
+    {{/if}}
+    <br>
 </template>
 
 <template name="question_details">

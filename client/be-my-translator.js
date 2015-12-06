@@ -14,6 +14,7 @@ if (Meteor.isClient) {
         MeteorCamera.getPicture(cameraOptions, function (error, data) {
            if (!error) {
                template.$('.photo').attr('src', data);
+               Session.set("photo", data);
            }
         });
         event.preventDefault();
