@@ -5,6 +5,7 @@
 
 
 <template name="main">
+    {{> loginButtons}}
     <img class="ui image" src="images/bmt-logo-title.png">
     <nav class="ui three item menu">
         <a class="item active" href="/">Ask</a>
@@ -19,7 +20,6 @@
 <template name="questionForm">
     <div class="ui fluid container">
         <form class="ask_question">
-            {{> loginButtons}}
             <div class="ui list">
 
                 <div class="item ui input"> <label>Title</label>

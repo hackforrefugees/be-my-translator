@@ -4,13 +4,14 @@ if (Meteor.isClient) {
             event.preventDefault();
 
             var question_doc = {
-                user: "Dummy User 1",
+                user: Meteor.userId(),
                 lang_from: event.target.lang_from.value,
                 lang_to: event.target.lang_to.value,
                 title: event.target.title.value,
                 timestamp: new Date(),
                 type: "text", // default
                 data: event.target.text.value,
+                username: Meteor.user().username,
             };
 
             var photo = Session.get("photo");

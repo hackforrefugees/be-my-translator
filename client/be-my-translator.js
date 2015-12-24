@@ -21,9 +21,15 @@ if (Meteor.isClient) {
     }
   });
 
-  Accounts.ui.config({
+/*  Accounts.ui.config({
     passwordSignupFields: "USERNAME_ONLY"
-  });
+  });*/
+
+Template.main.helpers({
+	user: function(){
+		return Meteor.users.findOne({_id: this._userId});
+		}
+ });
 
   Template.questionForm.helpers({
     //return some language into the template which will be displayed using {{spacebars}}

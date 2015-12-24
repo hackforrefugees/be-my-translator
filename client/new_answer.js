@@ -18,10 +18,11 @@ if (Meteor.isClient) {
                 { _id: question_id },
                 { $push: { answers: {
                     _id: new Mongo.ObjectID(),
-                    user: "Dummy User 2",
+                    user: Meteor.userId(),
                     type: "text",
                     data: answertext,
                     timestamp: new Date(),
+                    username: Meteor.user().username,
                 } } }
             );
             Router.go('/details/' + question_id);
