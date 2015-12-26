@@ -1,0 +1,51 @@
+<template name="questionForm">
+    <div class="ui fluid container">
+        <form class="ask_question">
+            <div class="ui list">
+
+                <div class="item ui input"> <label>Title</label>
+                    <input type="text" name="title" class="form-control">
+                </div>
+
+                <div class="item ui input"> <label>From</label>
+                    <select name="lang_from" class="ui dropdown">
+                        <option value disabled selected>--Select--</option>
+                        {{#each language}}
+                        <option> {{this}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="item ui input"> <label>To</label>
+                    <select name="lang_to" class="ui dropdown">
+                        <option value disabled selected>--Select--</option>
+                        {{#each language}}
+                        <option> {{this}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </div>
+
+            <div class="ui  horizontal list">
+                <div class="item ui input">
+                    <img class="photo"><br>
+                    <input type="text" name="text" placeholder="Type to add question" />
+                    <input type="submit" name="Send"/>
+                </div>
+
+
+                <div class="item ui input horizontal list">
+                    <button class="ui icon basic button go-to-record">
+                        <i class="unmute icon"></i>
+                    </button>
+
+                    <a href="#" class="takePhoto">
+                        <button class="ui icon basic button">
+                            <i class="camera icon">
+                            </i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</template>

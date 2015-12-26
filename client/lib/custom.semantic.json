@@ -53,7 +53,7 @@
   },
   "themes": {
     "amazon": false,
-    "basic": false,
+    "basic": true,
     "bookish": false,
     "bootstrap3": true,
     "chubby": false,

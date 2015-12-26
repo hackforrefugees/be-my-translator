@@ -1,0 +1,39 @@
+<template name="ask_tab">¨
+    <div>
+        <h1> <u><a href= "/new_question"> Ask a question</a></u></h1>
+        <br>
+        {{#if ongoing}}
+        <h2>Ongoing questions:</h2>
+        <br>
+        <div class="ui link items">
+            {{#each ongoing}}
+            {{> question_detail_button}}
+            <br><br>
+            {{/each}}
+        </div>
+        {{/if}}
+        {{#if answered}}
+        <h2>Answered questions:</h2>
+        <br>
+        <div class="ui items">
+            {{#each answered}}
+            {{> question_detail_button}}
+            <br><br>
+            {{/each}}
+        </div>
+        {{/if}}
+    </div>
+</template>
+
+<template name="question_detail_button">
+    <div class="item question-item">
+        <div class="image">
+            {{type}}
+        </div>
+        <div class="content">
+            <strong>{{lang_from}}</strong> to <strong>{{lang_to}}</strong>
+            <br>
+            {{timestamp}}
+        </div>
+    </div>
+</template>
